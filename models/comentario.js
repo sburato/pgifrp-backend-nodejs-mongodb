@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 
-const PessoaSchema = new Schema({
-  name: {
+const ComentarioSchema = new Schema({
+  usuario: {
     type: String,
     require: true
   },
@@ -11,16 +11,16 @@ const PessoaSchema = new Schema({
     type: String,
     require: true
   },
+
+  comentario: {
+    type: String,
+    require: true
+  },  
   
   senha: {
     type: String,
     require: true
   },  
-
-  username: {
-    type: String,
-    require: true
-  },
   
   date: {
     type: Date,
@@ -28,4 +28,4 @@ const PessoaSchema = new Schema({
   },  
 });
 
-module.exports = Pessoa = mongoose.model("pessoa", PessoaSchema);
+module.exports = Comentario = mongoose.model("comentario", ComentarioSchema);
